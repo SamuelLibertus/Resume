@@ -1,375 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Current resume of Samuel Libertus - Industrial, Operations and Digital Twin Engineering">
-  <title>Samuel Libertus - Resume</title>
+  <meta name="description" content="Resume of Samuel Libertus — Industrial Management, operations, digital twin, and customer engineering.">
+  <title>Samuel Libertus — Resume</title>
   <style>
     :root {
-      --background: #f3f4f6;
       --paper: #ffffff;
-      --text: #111111;
-      --muted: #555555;
-      --link: #1769c2;
+      --ink: #000000;
+      --link: #0563c1;
+      --screen: #eeeeee;
+      --rule: #000000;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
 
     body {
       margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      line-height: 1.5;
+      color: var(--ink);
+      background: var(--screen);
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+      line-height: 1.28;
+    }
+
+    .resume {
+      width: min(100%, 8.5in);
+      margin: 24px auto;
+    }
+
+    .page {
+      min-height: 11in;
+      padding: 0.6in 0.68in 0.55in;
+      background: var(--paper);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .page + .page {
+      margin-top: 18px;
+    }
+
+    header {
+      margin-bottom: 0.12in;
+    }
+
+    h1 {
+      margin: 0 0 0.02in;
+      font-size: 21pt;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .contact,
+    .profile-links {
+      margin: 0;
+      font-size: 11.5pt;
+      line-height: 1.25;
+    }
+
+    .profile-links {
+      margin-top: 0.02in;
     }
 
     a {
       color: var(--link);
       text-decoration: underline;
-      text-underline-offset: 2px;
+      text-underline-offset: 1px;
     }
 
-    .page {
-      max-width: 920px;
-      margin: 28px auto;
-      padding: 48px 54px;
-      background: var(--paper);
-      border: 1px solid #d5d5d5;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    a:hover,
+    a:focus {
+      text-decoration-thickness: 2px;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 30px;
-      padding-bottom: 18px;
-      border-bottom: 2px solid var(--text);
+    section {
+      margin-top: 0.13in;
     }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      margin-bottom: 5px;
-      font-size: 2.5rem;
-      line-height: 1;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .target-role {
-      margin: 0;
-      font-size: 1rem;
-      font-weight: bold;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .contact {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.91rem;
-      text-align: right;
-    }
-
-    .contact p { margin-bottom: 3px; }
-
-    .links {
-      display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 5px 13px;
-      margin-top: 7px;
-    }
-
-    section { margin-top: 23px; }
 
     h2 {
-      margin-bottom: 11px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid var(--text);
-      font-size: 1.1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      margin: 0 0 0.07in;
+      padding-bottom: 0.035in;
+      border-bottom: 1px solid var(--rule);
+      font-size: 15pt;
+      line-height: 1.1;
+      font-weight: 700;
     }
 
-    h3 {
-      margin-bottom: 2px;
-      font-size: 0.98rem;
-      line-height: 1.35;
-    }
-
-    p { margin-bottom: 7px; }
-
-    .skills { margin: 0; }
-
-    .skill-row {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 10px;
-      margin-bottom: 5px;
-    }
-
-    .skill-row dt { font-weight: bold; }
-    .skill-row dd { margin: 0; }
-    .entry { margin-top: 15px; }
-    .entry:first-of-type { margin-top: 0; }
-
-    .entry-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-    }
-
-    .entry-heading span {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .metadata {
-      margin-bottom: 4px;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .summary {
+      margin: 0;
+      text-align: justify;
+      text-indent: 0.42in;
     }
 
     ul {
-      margin: 5px 0 0;
-      padding-left: 21px;
+      margin: 0.04in 0 0.08in;
+      padding-left: 0.38in;
     }
 
-    li { margin-bottom: 4px; }
+    li {
+      margin: 0.025in 0;
+      padding-left: 0.03in;
+    }
 
-    @media (max-width: 700px) {
-      body { background: #ffffff; }
+    .skills {
+      margin-top: 0.02in;
+    }
 
-      .page {
+    .entry {
+      margin-top: 0.09in;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .entry-title {
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .entry-meta {
+      margin: 0.01in 0 0;
+      line-height: 1.2;
+    }
+
+    .entry ul {
+      margin-top: 0.035in;
+      margin-bottom: 0;
+    }
+
+    .education-detail {
+      margin: 0.025in 0 0;
+    }
+
+    .education-detail + .education-detail {
+      margin-top: 0;
+    }
+
+    .compact-list {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        background: var(--paper);
+        font-size: 11.5pt;
+      }
+
+      .resume {
         width: 100%;
         margin: 0;
-        padding: 30px 22px 42px;
-        border: 0;
+      }
+
+      .page {
+        min-height: auto;
+        padding: 28px 22px;
         box-shadow: none;
       }
 
-      header, .entry-heading { display: block; }
-      h1 { font-size: 2rem; }
+      .page + .page {
+        margin-top: 0;
+        padding-top: 0;
+      }
 
-      .contact {
-        margin-top: 16px;
+      h1 {
+        font-size: 20pt;
+      }
+
+      .contact .separator {
+        display: none;
+      }
+
+      .contact a,
+      .contact span {
+        display: block;
+      }
+
+      .summary {
         text-align: left;
+        text-indent: 0;
       }
+    }
 
-      .links { justify-content: flex-start; }
-
-      .skill-row {
-        display: block;
-        margin-bottom: 9px;
-      }
-
-      .entry-heading span {
-        display: block;
-        margin-top: 2px;
-      }
+    @page {
+      size: Letter;
+      margin: 0;
     }
 
     @media print {
-      @page {
-        size: A4;
-        margin: 14mm;
+      html,
+      body {
+        background: #ffffff;
       }
 
       body {
-        background: #ffffff;
-        color: #000000;
-        font-size: 10pt;
+        font-size: 12pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .resume {
+        width: 8.5in;
+        margin: 0;
       }
 
       .page {
-        width: 100%;
-        max-width: none;
+        width: 8.5in;
+        height: 11in;
+        min-height: 11in;
         margin: 0;
-        padding: 0;
-        border: 0;
         box-shadow: none;
+        overflow: hidden;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
       }
 
       a {
-        color: #000000;
-        text-decoration: none;
+        color: var(--link);
       }
-
-      section, .entry { break-inside: avoid; }
     }
   </style>
 </head>
-
 <body>
-  <main class="page">
-    <header>
-      <div>
+  <main class="resume">
+    <article class="page" aria-label="Resume page 1">
+      <header>
         <h1>Samuel Libertus</h1>
-        <p class="target-role">Industrial Engineer | Operations Engineer | Digital Twin Engineer</p>
-      </div>
-
-      <div class="contact">
-        <p>New Taipei City, Taiwan</p>
-        <p>
-          <a href="tel:+886908575004">+886 908-575-004</a> ·
+        <p class="contact">
+          <span>New Taipei City, Taiwan</span>
+          <span class="separator"> &nbsp;|&nbsp; </span>
+          <a href="tel:+886908575004">+886 908-575-004</a>
+          <span class="separator"> &nbsp;|&nbsp; </span>
           <a href="mailto:libertus2808@gmail.com">libertus2808@gmail.com</a>
         </p>
-        <nav class="links" aria-label="Professional profiles">
+        <p class="profile-links">
           <a href="https://www.linkedin.com/in/samuel-libertus-0b97851a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.cake.me/me/samuel-libertus" target="_blank" rel="noopener noreferrer">Cake</a>
-          <a href="https://pda.104.com.tw/profile/preview?vno=76f076wu8" target="_blank" rel="noopener noreferrer">104 Profile</a>
+          &nbsp;|&nbsp;
+          <a href="https://samuellibertus.github.io/Resume/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          &nbsp;|&nbsp;
           <a href="https://github.com/Samuellibertus" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </nav>
-      </div>
-    </header>
-
-    <section>
-      <h2>Professional Summary</h2>
-      <p>
-        Industrial Management MBA and Business Mathematics graduate with training in Python,
-        statistical analysis, systems engineering, production, inventory, and supply chain
-        management. Experience in multilingual operations support, data analysis, workflow
-        configuration, and process improvement. Seeking opportunities in industrial engineering,
-        operations engineering, and digital twin engineering, with a strong interest in simulation
-        and data-driven system improvement.
-      </p>
-    </section>
-
-    <section>
-      <h2>Technical Skills</h2>
-      <dl class="skills">
-        <div class="skill-row"><dt>Programming &amp; Querying</dt><dd>Python, R, SQL</dd></div>
-        <div class="skill-row"><dt>Data Analysis &amp; Statistics</dt><dd>Time-series forecasting, clustering, anomaly detection, data mining, experimental design</dd></div>
-        <div class="skill-row"><dt>Python Libraries &amp; Tools</dt><dd>Pandas, NumPy, scikit-learn, BeautifulSoup, Git/GitHub, Docker</dd></div>
-        <div class="skill-row"><dt>BI &amp; Visualization</dt><dd>Tableau, Power BI, R Shiny, Excel</dd></div>
-        <div class="skill-row"><dt>Industrial &amp; Systems</dt><dd>System analysis, stochastic processes, metaheuristics, production, inventory, supply chain, human factors</dd></div>
-        <div class="skill-row"><dt>AI &amp; Visual Workflows</dt><dd>ComfyUI, Flux, Wan, prompt configuration, parameter tuning</dd></div>
-        <div class="skill-row"><dt>AI Concepts - Self-Study</dt><dd>Large Language Models (LLMs), Vision-Language Models (VLMs), Retrieval-Augmented Generation (RAG), agentic AI workflows</dd></div>
-      </dl>
-    </section>
-
-    <section>
-      <h2>Professional Experience</h2>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>Operation Service Specialist (Multilingual Text Support) | TaskUs Taiwan</h3>
-          <span>Apr 2026-Present</span>
-        </div>
-        <p class="metadata">Taipei, Taiwan</p>
-        <ul>
-          <li>Completed one month of product and operations training with a top assessment result; apply English SOPs and Confluence documentation in live operations.</li>
-          <li>Provide text-based support across multiple languages, primarily Indonesian and English, and translate multilingual user communications into English for consistent internal handling.</li>
-          <li>Investigate platform, account, payment, security, and system-related cases by reviewing backend records, case logs, issue history, and available evidence.</li>
-          <li>Maintain consistent quality while responding to more than 100 user requests per day with accurate, privacy-compliant, customer-focused guidance.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>AI Engineer | Wonders.AI</h3>
-          <span>Sep 2025-Oct 2025</span>
-        </div>
-        <p class="metadata">Taipei, Taiwan</p>
-        <ul>
-          <li>Prepared fine-tuning datasets through Python-assisted web scraping, data cleaning, and structured workflow execution.</li>
-          <li>Configured and operated AI image- and video-generation workflows using existing Flux, Wan, and ComfyUI components.</li>
-          <li>Adjusted prompts, workflow connections, and generation parameters to improve output consistency and visual quality.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>Sales &amp; Operations Data Analyst Intern | PT Perusahaan Gas Negara (PGN)</h3>
-          <span>Sep 2021-Mar 2022</span>
-        </div>
-        <p class="metadata">Jakarta, Indonesia</p>
-        <ul>
-          <li>Automated daily and weekly reporting workflows using Python and Excel, reducing repetitive manual processing.</li>
-          <li>Built Power BI dashboards to visualize regional gas sales and consumption trends.</li>
-          <li>Applied Python-based statistical analysis to evaluate COVID-19 impacts on gas-consumption patterns.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>Data Scientist Intern | Supertype Pte Ltd</h3>
-          <span>Oct 2020-Dec 2020</span>
-        </div>
-        <p class="metadata">Jakarta, Indonesia</p>
-        <ul>
-          <li>Developed an interactive R Shiny application for stock technical analysis and data visualization.</li>
-          <li>Mentored more than 30 learners as a Teaching Assistant at Algoritma Data Science Academy.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>MBA, Industrial Management (Data Science Focus) | National Taiwan University of Science and Technology</h3>
-          <span>2023-2025</span>
-        </div>
-        <p class="metadata">Taiwan · GPA: 4.2/4.3</p>
-        <p><strong>Thesis:</strong> Integrating Time Series Clustering and Forecasting for Crop Insurance Pricing in Indonesia</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>BSc, Business Mathematics (Data Science Focus) | Universitas Prasetiya Mulya</h3>
-          <span>2018-2022</span>
-        </div>
-        <p class="metadata">Indonesia · GPA: 3.77/4.00, Cum Laude</p>
-        <p><strong>Thesis:</strong> Clustering and Feature Selection of Happiness and Well-Being Indicators</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Relevant Projects</h2>
-
-      <div class="entry">
-        <div class="entry-heading">
-          <h3>Time-Series Clustering &amp; Forecasting for Crop Insurance | Master's Thesis</h3>
-          <span>2024-2025</span>
-        </div>
-        <ul>
-          <li>Built an end-to-end analytical workflow for 202 Indonesian regencies using annual rice-production data from 2012-2018.</li>
-          <li>Applied graph-based outlier detection and consensus clustering using Euclidean, Dynamic Time Warping, and shape-based distances.</li>
-          <li>Compared GM(1,1), ETS, LSTM, TCN, and Transformer forecasting approaches; TCN performed best on the short time-series data.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>World Happiness Report Dashboard | R Shiny</h3>
-        <p>
-          Built an interactive dashboard for exploring country rankings and global happiness trends.
-          <a href="https://mueng.shinyapps.io/capstone/" target="_blank" rel="noopener noreferrer">View application</a>
         </p>
-      </div>
+      </header>
 
-      <div class="entry">
-        <h3>Historical Exchange-Rate Data Pipeline | Python</h3>
-        <p>
-          Automated historical exchange-rate data collection and reusable CSV cleaning for downstream analysis.
-          <a href="https://github.com/Samuellibertus/Webscrapping-capstone-by-Samuel-Libertus" target="_blank" rel="noopener noreferrer">View repository</a>
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">SUMMARY</h2>
+        <p class="summary">
+          Industrial Management MBA and Business Mathematics graduate with experience in multilingual
+          technical support, operations analytics, workflow configuration, and data-driven problem-solving.
+          Seeking entry-level Industrial Engineer, Digital Twin Engineer, Operational Engineer, and Customer
+          Engineer opportunities. Currently building foundational NVIDIA knowledge through free self-paced training.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>Certifications &amp; Languages</h2>
-      <p><strong>Algoritma Certifications:</strong> Full-Stack Data Science (Python and SQL); Business Intelligence (Tableau)</p>
-      <p><strong>NTUST Certificates:</strong> Data Science; Systems Engineering; Human Factors Engineering - Department of Industrial Management, June 2025</p>
-      <p><strong>Languages:</strong> Indonesian (Native), English (Fluent; TOEIC 945), Mandarin Chinese (Basic)</p>
-    </section>
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">SKILLS</h2>
+        <ul class="skills">
+          <li><strong>Programming &amp; Querying:</strong> Python, R and SQL</li>
+          <li><strong>BI &amp; Visualization:</strong> Tableau, Power BI, R Shiny and Excel</li>
+          <li><strong>Industrial &amp; Systems:</strong> System analysis, stochastic processes, metaheuristics, production, inventory, supply chain and human factors</li>
+          <li><strong>Current Self-Study:</strong> NVIDIA free self-paced training; LLMs, VLMs, RAG, agentic AI, digital twin and simulation fundamentals</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">EXPERIENCE</h2>
+
+        <div class="entry">
+          <p class="entry-title">Operation Service Specialist (Multilingual Text Support) &nbsp;|&nbsp; TaskUs Taiwan</p>
+          <p class="entry-meta">Taipei, Taiwan &nbsp;|&nbsp; Apr 2026 - Present</p>
+          <ul>
+            <li>Completed one month of product and operations training with a top assessment result; apply English SOPs and Confluence documentation in live operations.</li>
+            <li>Provide text-based support across multiple languages, primarily Indonesian and English, and translate multilingual user communications into English for consistent internal handling.</li>
+            <li>Investigate platform, account, payment, security, and system-related cases by reviewing backend records, case logs, issue history, and available evidence.</li>
+            <li>Maintain consistent quality while responding to more than 100 user requests per day with accurate, privacy-compliant, customer-focused guidance.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <p class="entry-title">AI Engineer &nbsp;|&nbsp; Wonders.AI</p>
+          <p class="entry-meta">Taipei, Taiwan &nbsp;|&nbsp; Sep 2025 - Oct 2025</p>
+          <ul>
+            <li>Prepared fine-tuning datasets through Python-assisted web scraping, data cleaning, and structured workflow execution.</li>
+            <li>Configured and operated AI image- and video-generation workflows using existing Flux, Wan, and ComfyUI components.</li>
+            <li>Adjusted prompts, workflow connections, and generation parameters to improve output consistency, visual quality, and reliability.</li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+    <article class="page" aria-label="Resume page 2">
+      <section aria-label="Continued experience">
+        <div class="entry">
+          <p class="entry-title">Sales &amp; Operations Data Analyst Intern &nbsp;|&nbsp; PT Perusahaan Gas Negara (PGN)</p>
+          <p class="entry-meta">Jakarta, Indonesia &nbsp;|&nbsp; Sep 2021 - Mar 2022</p>
+          <ul>
+            <li>Automated daily and weekly reporting workflows using Python and Excel, reducing repetitive manual processing.</li>
+            <li>Built Power BI dashboards to visualize regional gas sales and consumption trends.</li>
+            <li>Applied Python-based statistical analysis to evaluate COVID-19 impacts on gas-consumption patterns.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <p class="entry-title">Data Scientist Intern &nbsp;|&nbsp; Supertype Pte Ltd</p>
+          <p class="entry-meta">Jakarta, Indonesia &nbsp;|&nbsp; Oct 2020 - Dec 2020</p>
+          <ul>
+            <li>Developed an interactive R Shiny application for stock technical analysis and data visualization.</li>
+            <li>Mentored 30+ learners as a Teaching Assistant at Algoritma Data Science Academy.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">EDUCATION</h2>
+
+        <div class="entry">
+          <p class="entry-title">MBA, Industrial Management (Data Science Focus) &nbsp;|&nbsp; National Taiwan University of Science and Technology (NTUST)</p>
+          <p class="entry-meta">Taiwan &nbsp;|&nbsp; 2023 - 2025</p>
+          <p class="education-detail"><strong>GPA:</strong> 4.2/4.3</p>
+          <p class="education-detail"><strong>Thesis:</strong> Integrating Time Series Clustering and Forecasting for Crop Insurance Pricing in Indonesia</p>
+        </div>
+
+        <div class="entry">
+          <p class="entry-title">BSc, Business Mathematics (Data Science Focus) &nbsp;|&nbsp; Universitas Prasetiya Mulya</p>
+          <p class="entry-meta">Indonesia &nbsp;|&nbsp; 2018 - 2022</p>
+          <p class="education-detail"><strong>GPA:</strong> 3.77/4.00, Cum Laude</p>
+          <p class="education-detail"><strong>Thesis:</strong> Clustering and Feature Selection of Happiness and Well-Being Indicators</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">PROJECTS</h2>
+
+        <div class="entry">
+          <p class="entry-title">Time-Series Clustering &amp; Forecasting for Crop Insurance &nbsp;|&nbsp; Master's Thesis</p>
+          <p class="entry-meta">Indonesia &nbsp;|&nbsp; 2024 - 2025</p>
+          <ul>
+            <li>Built an end-to-end analytical workflow for 202 Indonesian regencies using annual rice-production data from 2012-2018.</li>
+            <li>Applied graph-based outlier detection and consensus clustering using Euclidean, Dynamic Time Warping, and shape-based distances.</li>
+            <li>Compared GM(1,1), ETS, LSTM, TCN, and Transformer forecasting approaches; TCN performed best on the short time-series data.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <p class="entry-title">World Happiness Report Dashboard &nbsp;|&nbsp; R Shiny Web Application</p>
+          <p class="entry-meta">Personal Project</p>
+          <ul>
+            <li>Built an interactive dashboard for exploring country rankings and global happiness trends.</li>
+            <li><a href="https://mueng.shinyapps.io/capstone/" target="_blank" rel="noopener noreferrer">Live application</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="certifications-heading">
+        <h2 id="certifications-heading">CERTIFICATIONS &amp; LANGUAGES</h2>
+        <ul class="compact-list">
+          <li><strong>Algoritma Certifications:</strong> Full-Stack Data Science (Python and SQL); Business Intelligence (Tableau)</li>
+          <li><strong>NTUST Certificates:</strong> Data Science; Systems Engineering; Human Factors Engineering - Department of Industrial Management, June 2025</li>
+          <li><strong>Languages:</strong> Indonesian (Native), English (Fluent; TOEIC 945), Mandarin Chinese (Basic)</li>
+        </ul>
+      </section>
+    </article>
   </main>
 </body>
 </html>
